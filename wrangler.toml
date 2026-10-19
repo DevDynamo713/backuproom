@@ -1,0 +1,12 @@
+name = "backuproom"
+main = "worker/worker.ts"
+compatibility_date = "2024-07-01"
+
+[durable_objects]
+bindings = [
+  { name = "BACKUPROOM_DO", class_name = "BackupRoomDO" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["BackupRoomDO"]
